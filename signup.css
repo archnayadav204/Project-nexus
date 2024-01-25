@@ -1,0 +1,75 @@
+body{
+  background-image: url('background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  height: 100vh;
+  text-align: center;
+}
+.signuptab{
+  
+    color: white;
+    font-size:4rem;
+    margin-top: 6rem;
+  
+}
+#loginform{
+  gap: 1rem;
+  margin: 2rem;
+  padding-top: 2rem;
+  font-size: 1.7rem;
+  color: white;
+  margin-bottom: 0;
+}
+
+#username{
+  height: 2rem;
+  width: 15rem;
+  background-color:#B0EAFD;
+  border-radius: .5REM;
+  border: none;
+  font-size: 1rem;
+  
+
+}
+#password1{
+  height: 2rem;
+  width: 15rem;
+  background-color:#B0EAFD;
+  border-radius: .5REM;
+  border: none;
+  font-size: 1rem;
+  margin-right: 4rem;
+}
+#password2{
+  height: 2rem;
+  width: 15rem;
+  background-color:#B0EAFD;
+  border-radius: .5REM;
+  border: none;
+  font-size: 1rem;
+  margin-right: 5.5rem;
+}
+#button{
+  margin-top: 4rem;
+  height: 3rem;
+  width: 7rem;
+  background-color:#000000;
+  border-radius: 1REM;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  margin-top: 6rem;
+}
+.error-message{
+  font-size: 1rem;
+  margin-left: 4rem;
+  margin-top: .1rem;
+  color: red;
+}
+#password-error{
+  margin-left: 9rem;
+
+}

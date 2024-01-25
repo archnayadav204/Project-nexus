@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+  
+<div class="logintab">
+  <p>Login</p>
+  
+</div>
+<div>
+  <p class="para">Welcome back!</p>
+  <p class="para">Please login to your account</p>
+</div>
+<form id="loginform">
+  <label for="username">Username:</label>
+  
+  <input type="text" id="username" name="username" required>
+  <br>
+  <br>
+  <label for="password">Password:</label>
+  
+  <input type="password" id="password" name="password" required>
+   <!-- Update the Password input in the login page -->
+<!-- <label for="password">Password:</label>
+<input type="password" id="password" name="password" required> -->
+<br>
+<input type="checkbox" id="showPassword" onclick="togglePasswordVisibility()">
+<label for="showPassword" id="showPassword">Show Password</label>
+
+<!-- ... rest of the login form ... -->
+
+
+</form>
+
+<p class="forget">Forgot password?</p>
+
+  <button id="button">Login</button>
+   <p id="signup">Don't have account? <a href="Signup.html">SignUp</a></p>
+</body>
+<script>
+  function togglePasswordVisibility() {
+    let passwordInput = document.getElementById("password");
+    let showPasswordCheckbox = document.getElementById("showPassword");
+
+    if (showPasswordCheckbox.checked) {
+        passwordInput.type = "text";
+    } else {
+        passwordInput.type = "password";
+    }
+}
+
+</script>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign-Up Page</title>
+  <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+  <div class="signuptab">
+    <p>Register</p>
+    </div>
+    <form id="loginform">
+      <label for="username">Username:</label>
+      
+      <input type="text" id="username" name="username" required>
+      <p id="username-error" class="error-message"></p>
+      
+
+      <label for="password1">Create Password:</label>
+      <input type="text" id="password1" name="password" required>
+      <p id="password-error" class="error-message"></p>
+      
+      
+      <label for="password2">Confirm Password:</label>
+     
+      <input type="text" id="password2" name="password" required>
+      <p id="confirm-password-error" class="error-message"></p>
+
+<!-- Add an error message element for general errors -->
+      <p id="signup-error" class="error-message"></p>
+
+    
+    
+    </form>  
+    
+    <button id="button" onclick="signup()">Submit</button>
+
+
+<script>
+  function signup() {
+    // Get input values
+    var newUsername = document.getElementById("username").value;
+    var newPassword = document.getElementById("password1").value;
+    var confirmPassword = document.getElementById("password2").value;
+
+    // Clear previous error messages
+    document.getElementById("username-error").innerText = "";
+    document.getElementById("password-error").innerText = "";
+    document.getElementById("confirm-password-error").innerText = "";
+    document.getElementById("signup-error").innerText = "";
+
+    // Example validation (you can customize based on your needs)
+    if (!newUsername) {
+        document.getElementById("username-error").innerText = "*Please enter a username.";
+        return;
+    }
+
+    if (!newPassword) {
+        document.getElementById("password-error").innerText = "*Please enter a password.";
+        return;
+    }
+
+    if (newPassword.length < 8) {
+        document.getElementById("password-error").innerText = "*Password must be at least 8 characters.";
+        return;
+    }
+
+    if (newPassword !== confirmPassword) {
+        document.getElementById("confirm-password-error").innerText = "*Passwords do not match.";
+        return;
+    }
+
+    // Add your signup logic here (e.g., make a request to the server)
+    // If successful, you can redirect the user or perform other actions
+
+    // Moved console logs and alert inside the signup function
+    console.log("Username:", newUsername);
+    console.log("Password:", newPassword);
+
+    // Simulate a form submission
+    alert("Form submitted successfully!");
+}
+
+// Other functions remain unchanged
+
+</script>
+    
+</body>
+
+</html>
